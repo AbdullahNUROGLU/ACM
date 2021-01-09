@@ -1,4 +1,6 @@
-﻿namespace ACM.BL
+﻿using System.Collections.Generic;
+
+namespace ACM.BL
 {
     public class Customer
     {
@@ -28,6 +30,29 @@
 
                 return fullName;
             }
+        }
+
+        public bool Valid()
+        {
+            var isValid = true;
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+            return isValid;
+        }
+
+        public Customer Retrieve(int cusomerId)
+        {
+            return new Customer();
+        }
+
+        public List<Customer> Retrieve()
+        {
+            return new List<Customer>();
+        }
+
+        public bool Save()
+        {
+            return true;
         }
     }
 }
