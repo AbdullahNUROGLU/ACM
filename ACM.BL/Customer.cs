@@ -6,11 +6,26 @@
         public string FirstName { get; set; }
         public string EmailAddress { get; set; }
         public int CustomerId { get; set; }
+
         public string FullName
         {
             get
             {
-                return LastName + ", " + FirstName;
+                string fullName = "";
+                if (LastName != null)
+                {
+                    fullName = LastName;
+                    if (FirstName != null)
+                    {
+                        fullName += ", " + FirstName;
+                    }
+                }
+                else
+                {
+                    fullName = FirstName;
+                }
+
+                return fullName;
             }
         }
     }
