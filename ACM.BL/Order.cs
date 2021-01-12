@@ -2,7 +2,7 @@
 
 namespace ACM.BL
 {
-    internal class Order
+    public class Order
     {
         public int OrderId { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
@@ -24,16 +24,6 @@ namespace ACM.BL
             if (OrderDate == null) isValid = false;
 
             return isValid;
-        }
-
-        public Order Retrieve(int orderId)
-        {
-            return new Order();
-        }
-
-        public bool Save()
-        {
-            return true;
         }
     }
 }
