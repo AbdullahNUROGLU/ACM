@@ -1,6 +1,6 @@
 ﻿namespace ACM.BL
 {
-    internal class Address
+    public class Address
     {
         public int AddressId { get; set; }
         public int AddressType { get; set; }
