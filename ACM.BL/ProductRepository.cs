@@ -16,9 +16,28 @@
             return product;
         }
 
-        public bool Save(Customer customer)
+        public bool Save(Product product)
         {
-            return true;
+            bool success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                    }
+                    else
+                    {
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+
+            return success;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
@@ -16,7 +16,7 @@
             ProductId = productId;
         }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 

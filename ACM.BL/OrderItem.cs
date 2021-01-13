@@ -1,6 +1,6 @@
 ﻿namespace ACM.BL
 {
-    internal class OrderItem
+    public class OrderItem
     {
         public int OrderItemId { get; private set; }
         public int Quantity { get; set; }
