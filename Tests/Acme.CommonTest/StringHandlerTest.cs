@@ -11,11 +11,10 @@ namespace Acme.CommonTest
         public void IsertSpaceTestValid()
         {
             //Arrange
-            StringHandler stringHandler = new StringHandler();
             string expexted = "Name Test";
 
             //Act
-            string actual = stringHandler.InsertSpaces("NameTest");
+            string actual = StringHandler.InsertSpaces("NameTest");
 
             //Assert
             Assert.AreEqual(expexted, actual);
@@ -25,11 +24,10 @@ namespace Acme.CommonTest
         public void IsertSpaceTestWithExistingSpace()
         {
             //Arrange
-            StringHandler stringHandler = new StringHandler();
             string expexted = "Name Test";
 
             //Act
-            string actual = stringHandler.InsertSpaces("Name Test");
+            string actual = StringHandler.InsertSpaces("Name Test");
 
             //Assert
             Assert.AreEqual(expexted, actual);

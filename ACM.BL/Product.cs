@@ -1,11 +1,26 @@
-﻿namespace ACM.BL
+﻿using Acme.Common;
+
+namespace ACM.BL
 {
     public class Product : EntityBase
     {
         public int ProductId { get; set; }
-        public string ProductName { get; set; }
+        private string _productName;
         public string ProductDisceiption { get; set; }
         public decimal? CurrentPrice { get; set; }
+
+        public string ProductName
+        {
+            get
+            {
+                //return StringHandler.InsertSpaces(_productName);
+                return _productName.InsertSpaces();
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
 
         public Product()
         {
