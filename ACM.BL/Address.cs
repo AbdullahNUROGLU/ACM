@@ -1,6 +1,6 @@
 ﻿namespace ACM.BL
 {
-    public class Address
+    public class Address : EntityBase
     {
         public int AddressId { get; set; }
         public int AddressType { get; set; }
@@ -20,7 +20,7 @@
             AddressId = addressId;
         }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (PostalCode == null) isValid = false;

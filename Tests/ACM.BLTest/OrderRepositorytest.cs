@@ -14,14 +14,12 @@ namespace ACM.BLTest
             OrderRepository orderRepository = new OrderRepository();
             Order expected = new Order
             {
-                OrderDate = new DateTimeOffset(),
-                ShippingAddress = "Address"
+                OrderDate = new DateTimeOffset()
             };
             //Act
             Order actual = orderRepository.Retrieve(1);
             //Assert
             Assert.AreEqual(expected.OrderDate, actual.OrderDate);
-            Assert.AreEqual(expected.ShippingAddress, actual.ShippingAddress);
         }
     }
 }

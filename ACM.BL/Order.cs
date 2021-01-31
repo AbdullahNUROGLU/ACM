@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
         public int OrderId { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
-        public string ShippingAddress { get; set; }
         public int CustomerId { get; set; }
         public int ShippingAddressId { get; set; }
         public List<OrderItem> OrderItems { get; set; }
@@ -22,7 +21,11 @@ namespace ACM.BL
             OrderItems = new List<OrderItem>();
         }
 
-        public bool Validate()
+        public string Log() => $"{OrderId}: Date: {this.OrderDate.Value.Date} Status: {this.EntityState.ToString()}";
+
+        public override string ToString() => $"{OrderDate.Value.Date} ({OrderId})";
+
+        public override bool Validate()
         {
             bool isValid = true;
 

@@ -9,7 +9,7 @@
             if (productId == 1)
             {
                 product.ProductName = "product";
-                product.ProductDisceiption = "info";
+                product.ProductDescription = "info";
                 product.CurrentPrice = 15.96M;
             }
 

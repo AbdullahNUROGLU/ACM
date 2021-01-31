@@ -6,7 +6,7 @@ namespace ACM.BL
     {
         public int ProductId { get; set; }
         private string _productName;
-        public string ProductDisceiption { get; set; }
+        public string ProductDescription { get; set; }
         public decimal? CurrentPrice { get; set; }
 
         public string ProductName
@@ -30,6 +30,11 @@ namespace ACM.BL
         {
             ProductId = productId;
         }
+
+        public string Log() =>
+    $"{ProductId}: {ProductName} Detail: {ProductDescription} Status: {EntityState.ToString()}";
+
+        public override string ToString() => ProductName;
 
         public override bool Validate()
         {

@@ -13,14 +13,14 @@ namespace ACM.BLTest
             Product expected = new Product(1)
             {
                 ProductName = "product",
-                ProductDisceiption = "info",
+                ProductDescription = "info",
                 CurrentPrice = 15.96M
             };
             var actual = productRepository.Retrieve(1);
 
             Assert.AreEqual(expected.ProductId, actual.ProductId);
             Assert.AreEqual(expected.ProductName, actual.ProductName);
-            Assert.AreEqual(expected.ProductDisceiption, actual.ProductDisceiption);
+            Assert.AreEqual(expected.ProductDescription, actual.ProductDescription);
             Assert.AreEqual(expected.CurrentPrice, actual.CurrentPrice);
         }
 

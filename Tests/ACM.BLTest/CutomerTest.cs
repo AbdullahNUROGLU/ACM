@@ -83,7 +83,7 @@ namespace ACM.BLTest
             };
 
             bool expexted = true;
-            bool actual = customer.Valid();
+            bool actual = customer.Validate();
             Assert.AreEqual(expexted, actual);
         }
 
@@ -96,7 +96,7 @@ namespace ACM.BLTest
             };
 
             bool expexted = false;
-            bool actual = customer.Valid();
+            bool actual = customer.Validate();
             Assert.AreEqual(expexted, actual);
         }
     }
